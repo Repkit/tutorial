@@ -1,10 +1,10 @@
+alias sam='/Users/Ionut.Baches/MyApplications/aws-sam-cli/sam'
+# if already have a project you can skip sam init
 sam init --name backend --runtime nodejs14.x \\n  --dependency-manager npm --app-template hello-world
 npx create-react-app frontend
 sam build && sam deploy --guided
 DOCKER_HOST=unix://$HOME/.docker/run/docker.sock sam local start-api
 npm install pg
 docker run --name postgres -e POSTGRES_PASSWORD=yourpassword -p 5432:5432 -d postgres
-
-
 
 define env vars https://stackoverflow.com/questions/48104665/aws-sam-local-environment-variables
